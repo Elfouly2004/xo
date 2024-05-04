@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:xo/game.dart';
-import 'package:xo/page1.dart';
+import 'package:xo/Gameplay.dart';
+import 'package:xo/home.dart';
+
 
 class login extends StatefulWidget {
   const login({super.key});
@@ -41,7 +42,7 @@ class _loginState extends State<login> {
                   icon: const Icon(Icons.arrow_back_ios_new),
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return page1();
+                      return HomePage();
                     },));
                   },
                 )
@@ -141,7 +142,7 @@ class _loginState extends State<login> {
              onTap: () {
                if(formkey1.currentState!.validate()==true&&formkey2.currentState!.validate()==true){
                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                   return box(Player1, Player2);
+                   return GamePlay(Player1, Player2);
                  },
                  )
                  );

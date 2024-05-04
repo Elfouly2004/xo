@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xo/page1.dart';
-import 'Gameplay.dart';
+import 'package:xo/login.dart';
 class HomePage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -88,7 +87,7 @@ class HomePage extends StatelessWidget{
                 Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context){
-                      return page1();
+                      return login();
                     })
                 );
               },
