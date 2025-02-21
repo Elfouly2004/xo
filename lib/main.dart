@@ -14,7 +14,6 @@ class XoApp extends StatelessWidget {
     return MaterialApp(
       title: "XO Abdelrahman",
       debugShowCheckedModeBanner: false,
-     //home: HomePage(),
       home: HomePage(),
     );
   }

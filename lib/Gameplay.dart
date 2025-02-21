@@ -21,7 +21,8 @@ class _GamePlayState extends State<GamePlay> {
   String player2="";
   _GamePlayState(this.player1,this.player2);
 
-
+  // String player1="a";
+  // String player2="d";
 
   check(){
     click++;

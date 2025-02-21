@@ -60,36 +60,31 @@ class _loginState extends State<login> {
              padding: const EdgeInsets.all(25.0),
              child: Form(
                key: formkey1,
-             child: Container(
-               height: 80,
-               width: 400,
-               decoration: BoxDecoration(borderRadius: BorderRadius.circular(50,),
-               color: Colors.white
-               ),
-               child: TextFormField(
-                 style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 30,),
-               keyboardType: TextInputType.name,
-               decoration: InputDecoration(
-                 fillColor: Colors.pink,
-                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
-                 labelText: "Player1 Name",
-                 prefixIcon: Icon(Icons.favorite_outlined),
-                 hintText: "Enter your name",
-                 iconColor: Colors.white,
-               ),
+             child: TextFormField(
+               style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 30,),
+             keyboardType: TextInputType.name,
+             decoration: InputDecoration(
+               fillColor: Colors.white,
+               filled: true,
+               border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
+               labelText: "Player1 Name",
+               prefixIcon: Icon(Icons.favorite_outlined),
+               hintText: "Enter your name",
+               iconColor: Colors.white,
+             ),
 
-                 onChanged:(value) {
-                   Player1=(value);
-                 },
-                 validator: (value) {
-                   if(value!.isEmpty||value==null){
-                    return "PLAYER NAME";
-                   }
-                   else{
-                     return (null);
-                   }
-                 },
-               ),
+               onChanged:(value) { //value = abdelrahman     &&  player1 = abdelrahman    ===>  Player1=(value)
+                 Player1=(value);
+               },
+
+               validator: (value) {
+                 if(value!.isEmpty||value==null){
+                  return "PLAYER NAME";
+                 }
+                 else{
+                   return (null);
+                 }
+               },
              ),
            ),
            ),
@@ -98,32 +93,30 @@ class _loginState extends State<login> {
               padding: const EdgeInsets.all(25.0),
               child: Form(
                 key: formkey2,
-              child: Container(
+              child: TextFormField(
+                style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 30,),
+                keyboardType: TextInputType.name,
 
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),
-                    color: Colors.white ),
-
-                child: TextFormField(
-                  style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 30,),
-                  keyboardType: TextInputType.name,
-                  decoration: InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
-                    labelText: "Player2 Name",
-                    prefixIcon: Icon(Icons.favorite_outlined),
-                    iconColor: Colors.white,
-                    hintText: "Enter your name",
-                  ),
-
-                  onChanged:(value) {
-                    Player2=(value);
-                  },
-                  validator: (value) {
-                    if(value!.isEmpty||value==null){
-                      return "ENTER PLAYER NAME";
-                    } else{
-                      return (null);
-                    }
-                  },
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(50),),
+                  labelText: "Player2 Name",
+                  prefixIcon: Icon(Icons.favorite_outlined),
+                  iconColor: Colors.white,
+                  hintText: "Enter your name",
                 ),
+
+                onChanged:(value) {
+                  Player2=(value);
+                },
+                validator: (value) {
+                  if(value!.isEmpty||value==null){
+                    return "ENTER PLAYER NAME";
+                  } else{
+                    return (null);
+                  }
+                },
               ),
             ),
             ),

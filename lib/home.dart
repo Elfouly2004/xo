@@ -74,7 +74,7 @@ class HomePage extends StatelessWidget{
 
 
 
-            Text("❤️_Donia sameh_❤️",
+            Text("ِAbdelrahman Montaser",
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
